@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   # mount_uploader :avatar, PhotoUploader
 
+  devise :omniauthable, omniauth_providers: %i[facebook]
+
   def full_name
     "#{first_name} #{last_name}"
   end
