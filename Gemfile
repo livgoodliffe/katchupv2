@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 
 gem 'omniauth-facebook'
+gem "http"
+gem "koala"
 
 group :development do
   gem 'web-console', '>= 3.3.0'

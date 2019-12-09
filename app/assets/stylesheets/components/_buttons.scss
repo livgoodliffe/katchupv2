@@ -1,0 +1,25 @@
+.btn {
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  p {
+    margin: 0px
+  }
+}
+
+.btn-fb {
+  background-color: #3b5998;
+  color: white;
+  i {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+
+.btn-submit {
+  background-color: $light-gray;
+}
