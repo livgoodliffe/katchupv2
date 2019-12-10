@@ -13,15 +13,16 @@
   }
   .search-text {
     margin: 0;
+    flex: 2;
+    outline: none;
   }
   input {
     background-color: $light-gray;
     border: none;
   }
   .search-exit {
-    position: absolute;
-    right: 8px;
-    top: 7px;
+    flex: 1;
+    margin: 5px;
     font-size: 20px;
     text-decoration: none;
     color: $katchup;

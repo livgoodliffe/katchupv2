@@ -1,6 +1,6 @@
 <!-- Search bar -->
 
-<%= form_tag(spots_path, method: :get) do %>
+<%= form_tag(spots_path, method: :get, remote: true) do %>
 
   <div class="search-bar">
 
@@ -18,3 +18,11 @@
 
   </div>
 <% end %>
+
+<!-- Search results -->
+
+<div id="search-results" class="d-flex flex-wrap">
+
+</div>
+
+
