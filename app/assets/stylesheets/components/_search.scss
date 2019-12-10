@@ -28,3 +28,40 @@
     color: $katchup;
   }
 }
+
+.search-result {
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0px 0px 5px $medium-gray;
+  border-radius: 5px;
+
+  a {
+    display: flex
+  }
+
+  .spot-image img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .spot-details {
+    text-decoration: none;
+    color: $dark-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .name {
+      font-weight: medium;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 15px;
+    }
+    .location p {
+      font-weight: light;
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
+}

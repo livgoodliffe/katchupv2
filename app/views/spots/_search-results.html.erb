@@ -2,9 +2,9 @@
 
 <% @spots_db.each do |spot| %>
 
-  <div class="spot-card mx-auto">
+  <div class="search-result">
     <%= link_to spot_path(spot) do %>
-      <%= render "spot-card-inside",
+      <%= render "result-card",
         name: spot.name,
         thumbnail: spot.thumbnail,
         suburb: spot.suburb,
@@ -26,7 +26,7 @@
     <% latitude = spot["restaurant"]["location"]["latitude"] %>
     <% longitude = spot["restaurant"]["location"]["longitude"] %>
 
-    <div class="spot-card mx-auto">
+    <div class="search-result">
 
       <%= link_to spots_path(
         res_id: res_id,
@@ -37,7 +37,7 @@
         latitude: latitude,
         longitude: longitude ), :method => :post do %>
 
-        <%= render "spot-card-inside",
+        <%= render "result-card",
           name: name,
           thumbnail: thumbnail,
           suburb: suburb,
