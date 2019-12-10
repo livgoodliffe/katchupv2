@@ -9,11 +9,12 @@
       <%= text_field_tag :query,
       params[:query],
       class: "search-text",
-      placeholder: "Search for a spot...",
+      placeholder: "Search...",
       id: "spots-search" %>
 
-
-      <i id='search-exit' class="fal fa-times-circle exit hidden"></i>
+      <%= link_to root_path do %>
+        <i class="fal fa-times-circle search-exit"></i>
+      <% end %>
 
   </div>
 <% end %>

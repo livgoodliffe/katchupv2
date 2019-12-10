@@ -1,4 +1,5 @@
 .search-bar {
+  position: relative;
   background-color: $light-gray;
   border-radius: 5px;
   margin-top: 10px;
@@ -8,12 +9,21 @@
   display: flex;
   align-items: center;
   .search-icon {
-    margin: 10px
-
+    margin: 10px;
   }
   .search-text {
     margin: 0;
-
   }
-
+  input {
+    background-color: $light-gray;
+    border: none;
+  }
+  .search-exit {
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    font-size: 20px;
+    text-decoration: none;
+    color: $katchup;
+  }
 }
