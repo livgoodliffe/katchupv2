@@ -21,6 +21,7 @@
     <% res_id = spot["restaurant"]["R"]["res_id"] %>
     <% thumbnail = spot["restaurant"]["thumb"] %>
     <% name = spot["restaurant"]["name"] %>
+    <% address = spot["restaurant"]["location"]["address"] %>
     <% suburb = spot["restaurant"]["location"]["locality"] %>
     <% city = spot["restaurant"]["location"]["city"] %>
     <% latitude = spot["restaurant"]["location"]["latitude"] %>
@@ -32,6 +33,7 @@
         res_id: res_id,
         thumbnail: thumbnail,
         name: name,
+        address: address,
         suburb: suburb,
         city: city,
         latitude: latitude,

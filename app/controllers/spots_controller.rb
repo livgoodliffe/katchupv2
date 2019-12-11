@@ -30,6 +30,7 @@ class SpotsController < ApplicationController
         format.js{}
       end
     end
+
   end
 
   def create
@@ -37,6 +38,7 @@ class SpotsController < ApplicationController
       res_id: params[:res_id],
       name: params[:name],
       thumbnail: params[:thumbnail],
+      address: params[:address],
       suburb: params[:suburb],
       city: params[:city],
       latitude: params[:latitude],
@@ -45,6 +47,11 @@ class SpotsController < ApplicationController
     @spot.save
 
     redirect_to spot_path(@spot)
+
+    @marker = [{
+      lat: @spot.latitude,
+      lng: @spot.longitude
+    }]
   end
 
   def show

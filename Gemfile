@@ -20,6 +20,7 @@ gem 'omniauth-facebook'
 gem 'http'
 gem 'koala'
 gem 'romato'
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

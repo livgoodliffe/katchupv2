@@ -11,3 +11,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h5 {
+  font-weight: medium;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+}
