@@ -1,0 +1,31 @@
+.button-underline-container {
+  width: 50%;
+}
+
+.button-underline {
+  color: $medium-gray;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.underline-active {
+  color: $katchup;
+}
+
+#moving-underline {
+  border: 1px solid $katchup;
+  transition: transform 0.5s;
+}
+
+#moving-underline.right {
+  transform: translate(50vw, 0);
+}
+
+#moving-underline.left {
+  transform: translate(-50vw, 0);
+}
+
+.hidden {
+  display: none !important;
+}

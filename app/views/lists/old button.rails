@@ -1,0 +1,13 @@
+<div class="d-flex">
+  <div class="button-underline-container">
+      <div id="wishlist_button" class="button-underline underline-active">
+        WANT TO TRY
+      </div>
+      <div id="moving-underline"></div>
+  </div>
+  <div class="button-underline-container">
+    <div id="visited_button" class="button-underline">
+      BEEN THERE
+    </div>
+  </div>
+</div>

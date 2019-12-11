@@ -8,6 +8,12 @@ class User < ApplicationRecord
 
   devise :omniauthable, omniauth_providers: [:facebook]
 
+  has_many :visiteds
+  has_many :wishlists
+
+  has_many :visited_spots, through: :visiteds, source: :spot
+  has_many :wishlist_spots, through: :wishlists, source: :spot
+
   def full_name
     "#{first_name} #{last_name}"
   end
