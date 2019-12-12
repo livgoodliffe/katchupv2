@@ -1,0 +1,35 @@
+<% if user_signed_in? %>
+
+  <div>
+
+    <% if current_user.wishlisted_spot?(spot) %>
+
+      <%= link_to wishlist_path(current_user.find_wishlist(spot)),
+        method: :delete,
+        remote: true,
+        style:"text-decoration: none !important" do %>
+
+        <button type="button" class="btn btn-light mr-2 wishlist-active">
+          WISHLIST
+          <i class="fas fa-bookmark ml-2"></i>
+        </button>
+
+      <% end %>
+
+    <% else %>
+
+      <%= link_to spot_wishlists_path(spot),
+        method: :post,
+        remote: true,
+        style:"text-decoration: none !important" do %>
+
+        <button type="button" class="btn btn-light mr-2">
+          WISHLIST
+          <i class="fas fa-bookmark ml-2"></i>
+        </button>
+
+      <% end %>
+
+    <% end %>
+  </div>
+<% end %>

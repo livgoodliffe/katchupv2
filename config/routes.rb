@@ -11,6 +11,17 @@ Rails.application.routes.draw do
 
   resources :lists
 
+  resources :maps
+
+  resources :visiteds, only: [:index, :destroy]
+
+  resources :wishlists, only: [:index, :destroy]
+
+  resources :spots, only: [:show, :index] do
+    resources :wishlists, only: :create
+    resources :visiteds, only: :create
+  end
+
   get 'friends' => 'pages#friends'
 
 end

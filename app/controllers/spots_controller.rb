@@ -56,5 +56,7 @@ class SpotsController < ApplicationController
 
   def show
     @spot = Spot.find(params[:id])
+
+    render :layout => 'without_navbar'
   end
 end

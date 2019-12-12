@@ -2,16 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def newsfeed
-
-    @spots = Spot.all
-
-    @markers = @spots.map do |spot|
-      {
-        lat: spot.latitude,
-        lng: spot.longitude
-      }
-    end
-
   end
 
   def friends

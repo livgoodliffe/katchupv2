@@ -1,0 +1,5 @@
+var wishlist = document.getElementById("w<%= @spot.id %>");
+wishlist.innerHTML = '<%= j render "shared/wishlist-button", spot: @spot %>';
+
+var visited = document.getElementById("<%= @spot.id %>");
+visited.innerHTML = '<%= j render "shared/visited-button", spot: @spot %>';

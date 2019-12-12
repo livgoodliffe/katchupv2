@@ -1,1 +1,41 @@
-<%= @spot.name %>
+<div>
+  <div class="card border-0">
+  <div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= @spot.thumbnail %>);">
+
+    <div style="margin: auto;">
+
+    <!-- Back icon -->
+
+    <div class="spot-banner-top-icons">
+      <%= link_to :back do %>
+        <i class="fas fa-arrow-left white-arrow"></i>
+      <% end %>
+    </div>
+
+    <!-- Spot name -->
+
+    <div class="show-banner-name">
+      <div>
+        <h1 ><%= @spot.name %></h1>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+
+  <div class="save-buttons">
+
+    <div id="w<%= @spot.id %>">
+      <%= render 'shared/wishlist-button', spot: @spot %>
+    </div>
+
+    <div id="<%= @spot.id %>">
+      <%= render 'shared/visited-button', spot: @spot %>
+    </div>
+
+  </div>
+
+</div>

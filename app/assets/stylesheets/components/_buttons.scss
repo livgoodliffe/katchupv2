@@ -1,3 +1,17 @@
+.save-buttons {
+  display: flex;
+}
+
+.wishlist-active {
+  background-color: $katchup;
+  color: white;
+}
+
+.visited-active {
+  background-color: $been-there;
+  color: white;
+}
+
 .btn {
   border-radius: 5px;
   width: 100%;

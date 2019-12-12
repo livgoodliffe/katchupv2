@@ -14,6 +14,22 @@ class User < ApplicationRecord
   has_many :visited_spots, through: :visiteds, source: :spot
   has_many :wishlist_spots, through: :wishlists, source: :spot
 
+  def visited_spot?(spot)
+    visiteds.where(spot: spot).any?
+  end
+
+  def find_visiteds(spot)
+    visiteds.where(spot: spot).first
+  end
+
+  def wishlisted_spot?(spot)
+    wishlists.where(spot: spot).any?
+  end
+
+  def find_wishlist(spot)
+    wishlists.where(spot: spot).first
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end

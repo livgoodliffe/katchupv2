@@ -1,10 +1,8 @@
- console.log("hello")
+function addResults(resultHTML) {
+ const resultsContainer = document.getElementById('search-results')
+ resultsContainer.insertAdjacentHTML('beforeend', resultHTML)
+}
 
- function addResults(resultHTML) {
-   const resultsContainer = document.getElementById('search-results')
-   resultsContainer.insertAdjacentHTML('beforeend', resultHTML)
- }
-
- addResults(`<%= render 'spots/search-results', spots_db: @spots_db, spots_zom: @spots_zom %>`)
+addResults(`<%= render 'spots/search-results', spots_db: @spots_db, spots_zom: @spots_zom %>`)
 
 
