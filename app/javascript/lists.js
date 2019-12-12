@@ -8,8 +8,6 @@ export default () => {
 
   if (wishlistButton) {
    wishlistButton.addEventListener('click', () => {
-
-    console.log("wishlist selected");
     visited.classList.add('hidden');
     wishlist.classList.remove('hidden');
    });
@@ -17,9 +15,6 @@ export default () => {
 
  if (visitedButton) {
    visitedButton.addEventListener('click', () => {
-
-    console.log("visited selected");
-
     visited.classList.remove('hidden');
     wishlist.classList.add('hidden');
    });

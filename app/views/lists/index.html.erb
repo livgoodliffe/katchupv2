@@ -13,12 +13,20 @@
 
 <div id="wishlist">
 
-  <h3>wishlist</h3>
+  <div class="d-flex flex-wrap">
+    <% @wishlist_spots.each do |spot| %>
+      <%= render "spot-card", spot: spot %>
+    <% end %>
+  </div>
 
 </div>
 
 <div id="visited" class="hidden">
 
-  <h3>visited</h3>
+  <div class="d-flex flex-wrap">
+    <% @visited_spots.each do |spot| %>
+      <%= render "spot-card", spot: spot %>
+    <% end %>
+  </div>
 
 </div>

@@ -1,9 +1,7 @@
-<div class="spot-card mx-auto">
+<div class="list-card mx-auto">
   <%= link_to spot_path(spot) do %>
     <!-- Image -->
-    <div class=spot-image>
-      <%= image_tag("#{spot.thumbnail}")%>
-    </div>
+    <%= image_tag spot.thumbnail %>
     <!-- Text -->
     <div class="spot-details">
       <div class="spot-name">

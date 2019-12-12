@@ -28,11 +28,13 @@
 
   <div class="save-buttons">
 
-    <div id="w<%= @spot.id %>">
+    <div id="w<%= @spot.id %>" class="flex-fill">
       <%= render 'shared/wishlist-button', spot: @spot %>
     </div>
 
-    <div id="<%= @spot.id %>">
+    <div style="width: 8px"></div>
+
+    <div id="<%= @spot.id %>" class="flex-fill">
       <%= render 'shared/visited-button', spot: @spot %>
     </div>
 
