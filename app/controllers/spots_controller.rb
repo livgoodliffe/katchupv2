@@ -10,7 +10,7 @@ class SpotsController < ApplicationController
 
     @spots_db = Spot.where('name ILIKE ?', "%#{term}%")
 
-    # @client = Romato::Zomato.new(ENV["ZOMATO_API"])
+    @client = Romato::Zomato.new(ENV["ZOMATO_API"])
 
     # @results = @client.get_search({ q: term, lat: current_user.latitude, lon: current_user.longitude })
     # @zom_results = @results["restaurants"]
