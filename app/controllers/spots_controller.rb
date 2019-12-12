@@ -6,7 +6,6 @@ class SpotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-
     term = params[:query]
 
     @spots_db = Spot.where('name ILIKE ?', "%#{term}%")
@@ -25,15 +24,12 @@ class SpotsController < ApplicationController
       end
     end
 
-
-
     if params[:query]
       respond_to do |format|
         format.html
-        format.js{}
+        format.js
       end
     end
-
   end
 
   def create
