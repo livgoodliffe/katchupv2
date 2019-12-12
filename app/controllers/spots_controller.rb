@@ -13,9 +13,11 @@ class SpotsController < ApplicationController
 
     @client = Romato::Zomato.new(ENV["ZOMATO_API"])
 
-    results = @client.get_search( { q: term, lat: current_user.latitude, lon: current_user.longitude } )
+    if term
+      results = @client.get_search({ q: term, lat: current_user.latitude, lon: current_user.longitude })
+      @zom_results = results["restaurants"]
+    end
 
-    @zom_results = results["restaurants"]
     @spots_zom = []
 
     @zom_results.each do |spot|
