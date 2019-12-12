@@ -6,9 +6,9 @@ class SpotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @term = params[:query]
+    term = params[:query]
 
-    # @spots_db = Spot.where('name ILIKE ?', "%#{term}%")
+    @spots_db = Spot.where('name ILIKE ?', "%#{term}%")
 
     # @client = Romato::Zomato.new(ENV["ZOMATO_API"])
 
