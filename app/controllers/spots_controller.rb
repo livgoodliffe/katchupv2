@@ -12,16 +12,14 @@ class SpotsController < ApplicationController
 
     @client = Romato::Zomato.new(ENV["ZOMATO_API"])
 
-    if term
-      @results = @client.get_search({ q: term, lat: current_user.latitude, lon: current_user.longitude })
-      @zom_results = @results["restaurants"]
-      @spots_zom = []
+    @results = @client.get_search({ q: term, lat: current_user.latitude, lon: current_user.longitude })
+    @zom_results = @results["restaurants"]
+    @spots_zom = []
 
-      @zom_results.each do |spot|
-        zom_res_id = spot["restaurant"]["R"]["res_id"]
-        result = Spot.exists?(res_id: zom_res_id)
-        @spots_zom.push(spot) if result == false
-      end
+    @zom_results.each do |spot|
+      zom_res_id = spot["restaurant"]["R"]["res_id"]
+      result = Spot.exists?(res_id: zom_res_id)
+      @spots_zom.push(spot) if result == false
     end
 
     if params[:query]
