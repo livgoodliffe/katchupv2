@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   resources :wishlists, only: [:index, :destroy]
 
+  resources :geolocation, only: [:index]
+
   resources :spots, only: [:show, :index] do
     resources :wishlists, only: :create
     resources :visiteds, only: :create
