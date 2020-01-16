@@ -1,5 +1,13 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:newsfeed]
+  skip_before_action :authenticate_user!, only: [:home]
+
+  def home
+    if user_signed_in?
+      redirect_to newsfeed_path
+    else
+      render :layout => 'without_navbar'
+    end
+  end
 
   def newsfeed
     lat = current_user.latitude
