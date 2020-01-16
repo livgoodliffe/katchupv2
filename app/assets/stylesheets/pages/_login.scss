@@ -1,0 +1,19 @@
+.page {
+  height: 100vh;
+  .welcome {
+    color: white;
+    height: 85vh;
+    border: 1px solid white;
+  }
+}
+
+.btn-fb {
+  border-radius: 5px;
+  background-color: $facebook;
+  color: white;
+  margin-top: 30px;
+  i {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}

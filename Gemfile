@@ -22,6 +22,7 @@ gem 'koala'
 gem 'romato'
 gem 'geocoder'
 gem 'jquery-rails'
+gem 'owlcarousel-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
