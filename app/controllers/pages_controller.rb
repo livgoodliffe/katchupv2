@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:newsfeed]
 
   def newsfeed
     lat = current_user.latitude
