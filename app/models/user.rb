@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # not sure what this is:
+  attr_accessor :remote_content_url
+
   # mount_uploader :avatar, PhotoUploader
 
   devise :omniauthable, omniauth_providers: [:facebook]
