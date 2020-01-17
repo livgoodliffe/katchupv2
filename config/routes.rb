@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users,
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  root to: 'pages#newsfeed'
+  root to: 'pages#home'
 
   resources :spots
 
@@ -25,5 +25,6 @@ Rails.application.routes.draw do
   end
 
   get 'friends' => 'pages#friends'
+  get 'newsfeed' => 'pages#newsfeed'
 
 end
