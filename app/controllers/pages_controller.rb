@@ -14,7 +14,7 @@ class PagesController < ApplicationController
     lon = current_user.longitude
 
     results = Geocoder.search([lat, lon])
-    @suburb = results.first.suburb
+    # @suburb = results.first.suburb
     # try and get it to read closest city
   end
 

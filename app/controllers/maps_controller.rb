@@ -24,7 +24,7 @@ class MapsController < ApplicationController
     @user = {
       lat: current_user.latitude,
       lon: current_user.longitude,
-      image_url: current_user.thumbnail
+      image_url: current_user.facebook_picture_url
     }
 
     @markers = @markers_wishlist + @markers_visited

@@ -2,14 +2,40 @@
 
   <div class="container login">
 
+    <h2>Log in</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  placeholder: "email",
+                  label: false,
+                  input_html: { class: "katchup-form-input", autocomplete: "email" }
+                  %>
+      <%= f.input :password,
+                  required: false,
+                  placeholder: "password",
+                  label: false,
+                  input_html: { class: "katchup-form-input", autocomplete: "current-password" }
+                  %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
+      <%= f.button :submit, "Log in", class: "login-button"  %>
+
+    <% end %>
+
+    <br>
+
+    <p>Don't have an account?</p>
+
+
     <%= link_to user_facebook_omniauth_authorize_path do %>
       <div class="btn btn-fb">
         <i class="fab fa-facebook-square"></i>
-        <p>Continue with Facebook</p>
+        <p>Sign up with Facebook</p>
       </div>
     <% end %>
 
   </div>
 
 </div>
-

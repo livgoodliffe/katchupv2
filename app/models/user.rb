@@ -2,14 +2,13 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :omniauthable, omniauth_providers: [:facebook]
 
   # not sure what this is:
   attr_accessor :remote_content_url
 
   # mount_uploader :avatar, PhotoUploader
-
-  devise :omniauthable, omniauth_providers: [:facebook]
 
   has_many :visiteds
   has_many :wishlists
@@ -44,6 +43,7 @@ class User < ApplicationRecord
     user_params[:token] = auth.credentials.token
     user_params[:token_expiry] = Time.at(auth.credentials.expires_at)
     user_params = user_params.to_h
+    user_params[:password] = auth.credentials.password
 
     user = User.find_by(provider: auth.provider, uid: auth.uid)
     user ||= User.find_by(email: auth.info.email) # User did a regular sign up in the past.
@@ -51,7 +51,7 @@ class User < ApplicationRecord
       user.update(user_params)
     else
       user = User.new(user_params)
-      user.password = Devise.friendly_token[0,20]  # Fake password for validation
+      # user.password = Devise.friendly_token[0,20]  # Fake password for validation
       user.save
     end
 
