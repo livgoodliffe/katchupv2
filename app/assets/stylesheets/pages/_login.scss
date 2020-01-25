@@ -1,11 +1,6 @@
 .page {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 100vh;
+  width: 100vw
 }
 
 .btn-fb {
@@ -29,7 +24,7 @@
 }
 
 .carousel-inner {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   background-image: linear-gradient($katchup-pink, $katchup);
   text-align: center;
