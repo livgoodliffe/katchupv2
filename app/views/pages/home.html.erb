@@ -5,32 +5,74 @@
       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
+
       <div class="carousel-item active">
-        <i class="fas fa-map-marker-alt carousel-icon"></i>
-        <h5>Katchup</h5>
-        <p>The foodie review app for friends.</p>
+        <div class="card text-white">
+          <div class="fill">
+            <%= image_tag('breakfast.jpg') %>
+          </div>
+          <div class="card-img-overlay">
+            <div class="carousel-text">
+              <h5 class="card-title">Katchup</h5>
+              <p class="card-text">The foodie review app for friends.</p>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="carousel-item">
-        <i class="fas fa-bookmark carousel-icon"></i>
-        <h5>Save your spots.</h5>
-        <p>Store all the spots you love and want to try.</p>
+        <div class="card text-white">
+          <div class="fill">
+            <%= image_tag('cafe.jpg') %>
+          </div>
+          <div class="card-img-overlay">
+            <h5 class="card-title">Wishlist</h5>
+            <p class="card-text">Store all the restaurants, cafes & bars you want to try.</p>
+          </div>
+        </div>
       </div>
+
       <div class="carousel-item">
-        <i class="fas fa-star carousel-icon"></i>
-        <h5>Share with friends.</h5>
-        <p>See what spots your friends are recommending, and share your faves.</p>
+        <div class="card text-white">
+          <div class="fill">
+            <%= image_tag('cookie.jpg') %>
+          </div>
+          <div class="card-img-overlay">
+            <h5 class="card-title">Been there done that</h5>
+            <p class="card-text">Save and review the spots you've visited.</p>
+          </div>
+        </div>
       </div>
+
+      <div class="carousel-item">
+        <div class="card text-white">
+          <div class="fill">
+            <%= image_tag('interior.jpg') %>
+          </div>
+          <div class="card-img-overlay">
+            <h5 class="card-title">Recommend</h5>
+            <p class="card-text">Share your favourite spots with your friends.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card text-white">
+          <div class="fill">
+            <%= image_tag('gyoza.jpg') %>
+          </div>
+          <div class="card-img-overlay">
+            <h5 class="card-title">Discover</h5>
+            <p class="card-text">See what spots your friends recommend and want to try.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
 
   <div class="container">
@@ -40,8 +82,6 @@
         <p>Continue with Facebook</p>
       </div>
     <% end %>
-
   </div>
-
 
 </div>
