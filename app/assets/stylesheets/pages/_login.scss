@@ -20,38 +20,30 @@
 }
 
 .fill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
-}
-.fill img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  img {
+    max-height: 90vh;
+  }
 }
 
 .carousel-inner {
   height: 90vh;
   width: 100vw;
-  background-color: $light-gray;
+  background-image: linear-gradient($katchup-pink, $katchup);
   text-align: center;
 }
 
-.carousel-icon {
-  color: linear-gradient($katchup-pink, $katchup);
-  font-size: 150px;
-  margin-bottom: 100px;
+.carousel-text {
+  margin-top: 300px
 }
 
-.carousel-item img {
-  height: 100%
-}
-
-.card-img {
-  object-fit: cover;
-}
-
-.card-img-overlay {
+.dark-filter {
   background-color: rgba(0,0,0,0.6);
+}
+
+.white-pin {
+  color: white;
+  font-size: 60px;
 }
