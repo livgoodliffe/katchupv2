@@ -35,12 +35,17 @@
     height: 100vh;
     object-fit: cover;
   }
+  .logo {
+    font-size: 70px;
+    margin-bottom: 20px
+  }
 }
 
 .carousel-text {
   width: 90%;
   margin: auto;
   margin-top: 30vh;
+  color: white
 }
 
 .dark-filter {
