@@ -4,19 +4,18 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .carousel {
-  height: 90vh;
-  max-height: 730px;
-  width: 100%;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   background-image: linear-gradient($katchup-pink, $katchup);
 }
 
 .login {
-  height: 10vh;
+  position: absolute;
+  bottom: 0px
 }
 
 .btn-fb {
@@ -31,44 +30,30 @@
   }
 }
 
-.carousel-inner {
-
-  // fucks up heeeeere
-  // position: relative;
-  height: 100%;
-
-  // min-height: inherit;
+.carousel-indicators {
+  bottom: 50px;
 }
-
 .carousel-item {
   text-align: center;
   color: white;
-  // position: absolute;
-  // height: 90vh;
 }
 
 .carousel-image {
-  // height: 90vh
-  max-width: 100%
+  height: 100vh;
+  margin: 0 auto;
 }
 
-// .fill {
-//   justify-content: center;
-//   overflow: hidden;
-//   img {
-//     max-height: 90vh;
-//   }
-// }
+.carousel-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-// .carousel-inner {
-  // width: 100vw;
-  // background-image: linear-gradient($katchup-pink, $katchup);
-  // text-align: center;
-// }
-
-// .carousel-text {
-//   margin-top: 300px
-// }
+.carousel-text {
+  width: 90%;
+  margin: auto;
+  margin-top: 300px;
+}
 
 .dark-filter {
   background-color: rgba(0,0,0,0.6);
