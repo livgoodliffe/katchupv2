@@ -1,25 +1,25 @@
-<div class="page">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
-    </ol>
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+  </ol>
 
-    <div class="carousel-inner">
+  <div class="carousel-inner">
 
-      <div class="carousel-item active">
-        <div class="carousel-text">
-          <h1>katchup</h1>
-          <p>The foodie review app for friends.</p>
-        </div>
+    <div class="carousel-item active">
+      <div class="carousel-text">
+        <h1>katchup</h1>
+        <p>The foodie review app for friends.</p>
       </div>
+    </div>
 
-      <div class="carousel-item">
-        <%= image_tag('cafe.jpg', class: 'carousel-image d-block card-img') %>
+    <div class="carousel-item">
+      <div class="card text-white">
+        <%= image_tag('cafe.jpg', class: 'card-img') %>
         <div class="card-img-overlay dark-filter">
           <div class="carousel-text">
             <h3>Wishlist</h3>
@@ -27,9 +27,11 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="carousel-item">
-        <%= image_tag('cookie.jpg', class: 'carousel-image d-block') %>
+    <div class="carousel-item">
+      <div class="card text-white">
+        <%= image_tag('cookie.jpg', class: 'card-img') %>
         <div class="card-img-overlay dark-filter">
           <div class="carousel-text">
             <h3>Been there done that</h3>
@@ -37,9 +39,11 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="carousel-item">
-        <%= image_tag('share.jpg', class: 'carousel-image d-block') %>
+    <div class="carousel-item">
+      <div class="card text-white">
+        <%= image_tag('share.jpg', class: 'card-img') %>
         <div class="card-img-overlay dark-filter">
           <div class="carousel-text">
             <h3>Recommend</h3>
@@ -47,9 +51,11 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="carousel-item">
-        <%= image_tag('interior.jpg', class: 'carousel-image d-block') %>
+    <div class="carousel-item">
+      <div class="card text-white">
+        <%= image_tag('interior.jpg', class: 'card-img') %>
         <div class="card-img-overlay dark-filter">
           <div class="carousel-text">
             <h3>Discover</h3>
@@ -58,24 +64,24 @@
         </div>
       </div>
     </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-
-    <div class="container login">
-      <%= link_to user_facebook_omniauth_authorize_path do %>
-        <button type="button" class="btn btn-fb btn-block mt-3 mb-3">
-          <i class="fab fa-facebook-square mr-2"></i>
-          Continue with Facebook
-        </button>
-      <% end %>
-    </div>
-
   </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+  <div class="container login">
+    <%= link_to user_facebook_omniauth_authorize_path do %>
+      <button type="button" class="btn btn-fb btn-block mt-3 mb-3">
+        <i class="fab fa-facebook-square mr-2"></i>
+        Continue with Facebook
+      </button>
+    <% end %>
+  </div>
+
 </div>
