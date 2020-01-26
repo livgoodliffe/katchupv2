@@ -1,12 +1,18 @@
 <div class="page">
 
   <div class="carousel" style="background-color: gray">
-    <h1>Carousel</h1>
+
+    <%= render 'carousel' %>
+
   </div>
 
-  <div class="container login" style="background-color: pink">
-    <button type="button" class="btn btn-secondary btn-lg btn-block mt-3">Block level button</button>
+  <div class="container login">
+    <%= link_to user_facebook_omniauth_authorize_path do %>
+      <button type="button" class="btn btn-fb btn-block mt-3 mb-3">
+        <i class="fab fa-facebook-square mr-2"></i>
+        Continue with Facebook
+      </button>
+    <% end %>
   </div>
-
 
 </div>

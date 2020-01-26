@@ -10,6 +10,8 @@
 
 .carousel {
   flex-grow: 2;
+  height: 100%;
+  width: 100%;
 }
 
 .login {
@@ -22,29 +24,39 @@
   background-color: $facebook;
   color: white;
   margin-top: 20px;
+  font-size: 18px;
   i {
     font-size: 25px;
     margin-right: 15px;
   }
 }
 
-.fill {
-  justify-content: center;
-  overflow: hidden;
-  img {
-    max-height: 90vh;
-  }
+// .carousel-inner {
+//   height: 100%;
+//   width: 100%;
+// }
+
+.carousel-image {
+  width: 100%
 }
 
-.carousel-inner {
-  width: 100vw;
-  background-image: linear-gradient($katchup-pink, $katchup);
-  text-align: center;
-}
+// .fill {
+//   justify-content: center;
+//   overflow: hidden;
+//   img {
+//     max-height: 90vh;
+//   }
+// }
 
-.carousel-text {
-  margin-top: 300px
-}
+// .carousel-inner {
+  // width: 100vw;
+  // background-image: linear-gradient($katchup-pink, $katchup);
+  // text-align: center;
+// }
+
+// .carousel-text {
+//   margin-top: 300px
+// }
 
 .dark-filter {
   background-color: rgba(0,0,0,0.6);
