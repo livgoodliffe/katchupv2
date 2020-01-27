@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient($katchup-pink, $katchup);
+  // background-image: linear-gradient($katchup-pink, $katchup);
 }
 
 .login {
@@ -24,6 +24,16 @@
   }
 }
 
+.brand {
+  display: flex;
+  justify-content: center;
+  .logo {
+    width: 60vw;
+    height: auto;
+    margin-top: 100px
+  }
+}
+
 .carousel-indicators {
   bottom: 50px;
 }
@@ -35,24 +45,37 @@
     height: 100vh;
     object-fit: cover;
   }
-  .logo {
-    font-size: 70px;
-    margin-bottom: 20px
+  .logo-img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px
   }
-}
-
-.carousel-text {
-  width: 90%;
-  margin: auto;
-  margin-top: 30vh;
-  color: white
+  .content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    .logo {
+      display: flex;
+      position: absolute;
+      top: 20px;
+    }
+    .text {
+      margin-top: 35vh;
+      width: 90%;
+    }
+  }
 }
 
 .dark-filter {
   background-color: rgba(0,0,0,0.6);
 }
 
-.white-pin {
-  color: white;
-  font-size: 60px;
+.carousel-indicators li {
+  background-image: linear-gradient($katchup-pink, $katchup);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
