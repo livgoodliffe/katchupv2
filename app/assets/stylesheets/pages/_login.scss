@@ -28,7 +28,7 @@
   display: flex;
   justify-content: center;
   .logo {
-    width: 60vw;
+    width: 60%;
     height: auto;
     margin-top: 100px
   }
@@ -55,7 +55,7 @@
     justify-content: center;
     align-content: center;
     position: relative;
-    .logo {
+    .logosmall {
       display: flex;
       position: absolute;
       top: 20px;
