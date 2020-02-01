@@ -1,0 +1,17 @@
+{
+    "name": "Katchup App",
+    "short_name": "Katchup",
+    "theme_color": "#ba0135",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://katchup.app/",
+    "description": "The foodie review app for friends.",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "images/logo2.png",
+            "sizes": "1024x1024"
+        }
+    ]
+}
