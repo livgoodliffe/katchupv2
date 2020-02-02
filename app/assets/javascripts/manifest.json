@@ -10,7 +10,7 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "images/logo.png",
+            "src": "images/logo-phone.png",
             "sizes": "1024x1024"
         }
     ]
