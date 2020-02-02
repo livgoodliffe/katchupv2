@@ -22,6 +22,7 @@ gem 'koala'
 gem 'romato'
 gem 'geocoder'
 gem 'jquery-rails'
+gem 'rails_real_favicon'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
