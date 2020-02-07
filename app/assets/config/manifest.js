@@ -2,3 +2,5 @@
 //= link_directory ../stylesheets .css
 
 //= link application.js
+
+//= link favicon/browserconfig.xml
