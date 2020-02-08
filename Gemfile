@@ -24,8 +24,6 @@ gem 'geocoder'
 gem 'jquery-rails'
 gem 'rails_real_favicon'
 
-gem 'serviceworker-rails'
-
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
