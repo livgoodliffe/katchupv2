@@ -5,10 +5,6 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  # Service Worker Routes
-  get '/service-worker.js' => "service_worker#service_worker"
-  get '/manifest.json' => "service_worker#manifest"
-
   resources :spots
 
   resources :users
