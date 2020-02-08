@@ -1,17 +1,21 @@
 {
-    "name": "Katchup App",
-    "short_name": "Katchup",
-    "theme_color": "#ba0135",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "https://katchup.app/",
-    "description": "The foodie review app for friends.",
-    "orientation": "any",
-    "icons": [
-        {
-            "src": "images/logo-phone.png",
-            "sizes": "1024x1024"
-        }
-    ]
+  "short_name": "katchup",
+  "name": "katchup app",
+  "icons": [
+    {
+      "src": "/images/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/newsfeed/?source=pwa",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ba0135"
 }
