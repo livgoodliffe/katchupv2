@@ -3,19 +3,19 @@
   "name": "katchup app",
   "icons": [
     {
-      "src": "/assets/images/logo-192.png",
+      "src": "<%= asset_path('logo-192.png') %>",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/images/logo-512.png",
+      "src": "<%= asset_path('logo-512.png') %>",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/newsfeed/?source=pwa",
+  "start_url": "<%= root_path %>",
   "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "/",
+  "scope": "<%= root_path %>",
   "theme_color": "#ba0135"
 }
