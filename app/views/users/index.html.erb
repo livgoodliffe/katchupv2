@@ -1,0 +1,54 @@
+<div class="container">
+  <ul class="nav nav-pills mb-3" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Friends</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Requests</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Add friends</a>
+    </li>
+  </ul>
+
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <% @friends.each do |friend| %>
+        <div class="friend-row">
+          <div class="py-0 d-flex align-items-center">
+            <%= cl_image_tag(friend.friend.avatar, class: "avatar mr-3") %>
+            <%= friend.friend.full_name %>
+          </div>
+          <%= link_to user_path(friend.friend), class: "card-link" do %>
+          <% end %>
+        </div>
+      <% end %>
+
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h5 class="mt-5 mb-2">Sent</h5>
+      <% @outgoing.each do |request| %>
+        <div class="friend-row d-flex justify-content-between">
+          <%= request.friend.full_name %>
+          <%= link_to "Cancel", friend_request_path(request, user_id: request.friend.id), method: :delete, class: "requests-link" %>
+        </div>
+      <% end %>
+
+      <% if @incoming.count > 0 %>
+        <h5 class="mt-5 mb-2">Recieved</h5>
+            <% @incoming.each do |request| %>
+                <div class="friend-row d-flex justify-content-between">
+                  <%= request.user.full_name %>
+                  <%= link_to "Accept", friend_request_path(request), method: :put %>
+                </div>
+            <% end %>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <% @users.each do |user| %>
+        <%= render 'user', user: user %>
+      <% end %>
+    </div>
+  </div>
+</div>

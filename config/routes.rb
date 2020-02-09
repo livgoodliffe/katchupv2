@@ -27,6 +27,23 @@ Rails.application.routes.draw do
     resources :visiteds, only: :create
   end
 
+  resources :users, only: [:index, :show] do
+    member do
+      post :follow
+      post :unfollow
+      get :wishlists, only: [:index]
+      get :favourites, only: [:index]
+      get :friendships, only: [:index]
+    end
+  end
+
+  resources :friend_requests, only: [:index, :create, :update, :destroy]
+  resources :friendships, only: [:index]
+
+
+  resources :pending, only: [:index, :destroy]
+  resources :request, only: [:index, :destroy]
+
   get 'friends' => 'pages#friends'
   get 'newsfeed' => 'pages#newsfeed'
 
