@@ -1,29 +1,8 @@
 <!DOCTYPE html >
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Katchup</title>
 
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-    <%= favicon_link_tag asset_path('logo-transparent.png') %>
-
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %>
-
-    <link rel="apple-touch-icon" href="/icon-whiteframe.png">
-
-    <link rel="manifest" href="/manifest.json">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#BA0135"/>
-
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/1f9cc9e6ce.js"></script>
-
-    <!-- Bootstrap mobile first -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <%= render 'head' %>
 
   <body>
     <%= render 'shared/geolocation' %>
