@@ -1,6 +1,10 @@
 {
   "name": "katchup",
   "short_name": "katchup",
+  "theme_color": "#ba0135",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "Scope": "/",
   "start_url": "/",
   "icons": [
     {
@@ -44,8 +48,5 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#BA0135",
-  "background_color": "#FFFFFF",
-  "display": "standalone",
-  "orientation": "portrait"
+  "splash_pages": null
 }
